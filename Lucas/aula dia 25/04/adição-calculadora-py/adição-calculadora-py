@@ -1,0 +1,27 @@
+def soma(a, b):
+    return a + b
+def soma_interface():
+    try:
+        a = float(entrada_a_soma.get())
+     def soma(a, b):
+    return a + b   b = float(entrada_b_soma.get())
+        resultado = soma(a, b)
+        label_resultado_soma.config(text=f"Resultado: {resultado}")
+    except ValueError:
+        messagebox.showerror("Erro", "Entrada inválida!")
+
+label_a_soma = Label(aba_basica, text="Valor de a:")
+label_a_soma.pack()
+entrada_a_soma = Entry(aba_basica)
+entrada_a_soma.pack()
+
+label_b_soma = Label(aba_basica, text="Valor de b:")
+label_b_soma.pack()
+entrada_b_soma = Entry(aba_basica)
+entrada_b_soma.pack()
+
+botao_somar = Button(aba_basica, text="Somar", command=soma_interface)
+botao_somar.pack()
+
+label_resultado_soma = Label(aba_basica, text="Resultado:")
+label_resultado_soma.pack()

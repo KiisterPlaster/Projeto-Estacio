@@ -1,0 +1,97 @@
+
+app = tk.Tk()
+app.title("Calculadora Avançada")
+# ... (código para implementar interfaces gráficas de outras funções de engenharia civil)
+
+# ... (código restante da interface gráfica)
+
+# ... (código anterior para funções básicas, memória e outras funções de engenharia civil)
+
+# Funções de Engenharia Civil
+def momento_fletor_interface():
+    try:
+        forca = float(entrada_forca_mf.get())
+        distancia = float(entrada_distancia_mf.get())
+        tipo_apoio = entrada_tipo_apoio_mf.get().lower()
+
+        if tipo_apoio not in ["engasta", "bi-apoiada", "encastre-livre"]:
+            raise ValueError("Tipo de apoio inválido.")
+
+        resultado = momento_fletor(forca, distancia, tipo_apoio)
+        if resultado is not None:
+            label_resultado_mf.config(text=f"Momento Fletor: {resultado:.4f} N.m")
+        else:
+            messagebox.showerror("Erro", "Falha ao calcular o momento fletor.")
+    except ValueError as e:
+        messagebox.showerror("Erro", f"Entrada inválida: {e}")
+
+# Interface Gráfica para Cálculo de Momento Fletor (aba_engenharia_civil)
+label_forca_mf = Label(aba_engenharia_civil, text="Força (N):")
+label_forca_mf.pack()
+entrada_forca_mf = Entry(aba_engenharia_civil)
+entrada_forca_mf.pack()
+
+label_distancia_mf = Label(aba_engenharia_civil, text="Distância (m):")
+label_distancia_mf.pack()
+entrada_distancia_mf = Entry(aba_engenharia_civil)
+entrada_distancia_mf.pack()
+
+label_tipo_apoio_mf = Label(aba_engenharia_civil, text="Tipo de Apoio:")
+label_tipo_apoio_mf.pack()
+entrada_tipo_apoio_mf = Entry(aba_engenharia_civil)
+entrada_tipo_apoio_mf.pack()
+
+botao_calcular_mf = Button(aba_engenharia_civil, text="Calcular", command=momento_fletor_interface)
+botao_calcular_mf.pack()
+
+label_resultado_mf = Label(aba_engenharia_civil, text="Resultado:")
+label_resultado_mf.pack()
+
+# ... (código restante da interface gráfica)
+
+import tkinter as tk
+from tkinter import messagebox
+from math import sqrt
+
+# Funções matemáticas básicas
+def soma(a, b):
+    return a + b
+
+def subtracao(a, b):
+    return a - b
+
+def multiplicacao(a, b):
+    return a * b
+
+def divisao(a, b):
+    if b == 0:
+        return None
+    return a / b
+
+def potenciacao(base, expoente):
+    return base ** expoente
+
+def raiz_quadrada(numero):
+    if numero < 0:
+        return None
+    return sqrt(numero)
+
+def raiz_n_esima(numero, indice):
+    if numero < 0 and indice % 2 == 0:
+        return None
+    return numero ** (1 / indice)# ... (interfaces para as outras funções básicas: subtração, multiplicação, divisão)
+
+# Funções avançadas (integração, derivada, transformada de Fourier)
+label_titulo_avancada = tk.Label(aba_avancada, text="Funções Avançadas")
+label_titulo_avancada.pack()
+
+# ... (implementar interfaces para integração, derivada e transformada de Fourier)
+
+# Funções de memória (adicionar, remover, consultar, limpar)
+label_titulo_memoria = tk.Label(aba_memoria, text="Memória")
+label_titulo_memoria.pack()
+
+# ... (implementar interfaces para as funções de memória)
+
+# Funções de Engenharia Civil (momento fletor, cortante, etc.)
+label_titulo_engenharia_civil = tk.Label(aba_engenharia_civil, text="Engenharia Civil")

@@ -1,0 +1,19 @@
+def divisao(a, b):
+    if b == 0:
+        messagebox.showerror("Erro", "Divisão por zero!")
+        return None
+    else:
+        return a / b
+def divisao_interface():
+    try:
+        a = float(entrada_a_divisao.get())
+        b = float(entrada_b_divisao.get())
+        resultado = divisao(a, b)
+        label_resultado_divisao.config(text=f"Resultado: {resultado}")
+    except ValueError:
+        messagebox.showerror("Erro", "Entrada inválida!")
+    except ZeroDivisionError:
+        messagebox.showerror("Erro", "Divisão por zero!")
+
+label_a_divisao = Label(aba_basica, text="Valor de a:")
+label_a_
