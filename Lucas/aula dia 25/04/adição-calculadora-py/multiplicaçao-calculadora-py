@@ -1,0 +1,26 @@
+def multiplicacao(a, b):
+    return a * b
+def multiplicacao_interface():
+    try:
+        a = float(entrada_a_multiplicacao.get())
+        b = float(entrada_b_multiplicacao.get())
+        resultado = multiplicacao(a, b)
+        label_resultado_multiplicacao.config(text=f"Resultado: {resultado}")
+    except ValueError:
+        messagebox.showerror("Erro", "Entrada inválida!")
+
+label_a_multiplicacao = Label(aba_basica, text="Valor de a:")
+label_a_multiplicacao.pack()
+entrada_a_multiplicacao = Entry(aba_basica)
+entrada_a_multiplicacao.pack()
+
+label_b_multiplicacao = Label(aba_basica, text="Valor de b:")
+label_b_multiplicacao.pack()
+entrada_b_multiplicacao = Entry(aba_basica)
+entrada_b_multiplicacao.pack()
+
+botao_multiplicar = Button(aba_basica, text="Multiplicar", command=multiplicacao_interface)
+botao_multiplicar.pack()
+
+label_resultado_multiplicacao = Label(aba_basica, text="Resultado:")
+label_resultado_multiplicacao.pack()
