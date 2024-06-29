@@ -33,7 +33,7 @@ def show_splash():
     splash_root.overrideredirect(True)  # Remove a barra de título da janela
 
     # Carrega o ícone a partir do arquivo de imagem
-    icon = ImageTk.PhotoImage(Image.open("engineering_icon.png"))
+    icon = ImageTk.PhotoImage(Image.open("images/icon.png"))
     icon_label = tk.Label(splash_root, image=icon)
     icon_label.pack(pady=20)
 
@@ -44,7 +44,7 @@ root = tk.Tk()
 root.title("Calculadora de Engenharia")
 
 # Carrega o ícone a partir do arquivo de imagem
-icon = ImageTk.PhotoImage(Image.open("engineering_icon.png"))
+icon = ImageTk.PhotoImage(Image.open("images/icon.png"))
 root.iconphoto(False, icon)
 
 # Configura o estilo dos botões

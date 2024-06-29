@@ -1,0 +1,24 @@
+Para desenvolver uma aplicação web completa que inclui login e senha, um chat em tempo real com criptografia, backup das conversas, e uma calculadora avançada para engenharia, vamos seguir os seguintes passos:
+
+Configuração do ambiente.
+Criação do banco de dados para usuários e mensagens.
+Desenvolvimento das funcionalidades de login e registro.
+Implementação do chat em tempo real.
+Desenvolvimento da calculadora avançada com funcionalidades específicas para diferentes áreas de engenharia.
+Implementação de criptografia para as mensagens.
+Implementação de backup das conversas.
+Criação de uma interface web para os usuários.
+
+
+gunicorn -w 4 -b 0.0.0.0:8000 run:app
+
+Atualize o run.py para usar o eventlet em produção:
+
+from app import create_app, socketio
+import eventlet
+
+app = create_app()
+
+if __name__ == '__main__':
+    eventlet.monkey_patch()
+    socketio.run(app, host='0.0.0.0', port=8000, debug=True)

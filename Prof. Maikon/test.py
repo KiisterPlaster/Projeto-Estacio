@@ -20,6 +20,16 @@ def multiplicacao(a, b):
     return a * b
 
 def divisao(a, b):
+    """
+    Perform division of two numbers and handle division by zero with an error message.
+
+    Args:
+    a (float): The numerator in the division.
+    b (float): The denominator in the division.
+
+    Returns:
+    float or None: The result of the division if b is not zero. Returns None and displays an error message if b is zero.
+    """
     if b == 0:
         messagebox.showerror("Erro", "Divisão por zero!")
         return None
@@ -182,6 +192,7 @@ def tratamento_agua(metodo, parametros):
 
 def tratamento_esgoto(metodo, parametros):
     # Implementar a lógica para cálculo de estações de tratamento de esgoto utilizando métodos como ativação por lodo
+    pass
 
 # Funções para topografia (implementar de acordo com suas necessidades)
 def area_terreno(vertices):

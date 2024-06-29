@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{{ url_for('main.register') }}">Register</a>
+            <a href="{{ url_for('main.login') }}">Login</a>
+            <a href="{{ url_for('main.chat') }}">Chat</a>
+            <a href="{{ url_for('main.calculator') }}">Calculator</a>
+        </nav>
+    </header>
+    <div class="container">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="flash {{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
