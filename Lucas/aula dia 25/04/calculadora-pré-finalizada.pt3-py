@@ -1,0 +1,133 @@
+import tkinter as tk
+from tkinter import messagebox
+import math
+
+def add():
+    try:
+        result = float(entry1.get()) + float(entry2.get())
+        label_result.config(text="Resultado: " + str(result))
+    except ValueError:
+        messagebox.showerror("Erro", "Por favor, insira números válidos.")
+
+def subtract():
+    try:
+        result = float(entry1.get()) - float(entry2.get())
+        label_result.config(text="Resultado: " + str(result))
+    except ValueError:
+        messagebox.showerror("Erro", "Por favor, insira números válidos.")
+
+def multiply():
+    try:
+        result = float(entry1.get()) * float(entry2.get())
+        label_result.config(text="Resultado: " + str(result))
+    except ValueError:
+        messagebox.showerror("Erro", "Por favor, insira números válidos.")
+
+def divide():
+    try:
+        if float(entry2.get()) == 0:
+            messagebox.showerror("Erro", "Divisão por zero não é permitida.")
+        else:
+            result = float(entry1.get()) / float(entry2.get())
+            label_result.config(text="Resultado: " + str(result))
+    except ValueError:
+        messagebox.showerror("Erro", "Por favor, insira números válidos.")
+
+def power():
+    try:
+        result = float(entry1.get()) ** float(entry2.get())
+        label_result.config(text="Resultado: " + str(result))
+    except ValueError:
+        messagebox.showerror("Erro", "Por favor, insira números válidos.")
+
+def sqrt():
+    try:
+        result = math.sqrt(float(entry1.get()))
+        label_result.config(text="Resultado: " + str(result))
+    except ValueError:
+        messagebox.showerror("Erro", "Por favor, insira um número válido.")
+
+def log():
+    try:
+        result = math.log(float(entry1.get()), float(entry2.get()))
+        label_result.config(text="Resultado: " + str(result))
+    except ValueError:
+        messagebox.showerror("Erro", "Por favor, insira números válidos.")
+
+def sin():
+    try:
+        result = math.sin(math.radians(float(entry1.get())))
+        label_result.config(text="Resultado: " + str(result))
+    except ValueError:
+        messagebox.showerror("Erro", "Por favor, insira um número válido.")
+
+def cos():
+    try:
+        result = math.cos(math.radians(float(entry1.get())))
+        label_result.config(text="Resultado: " + str(result))
+    except ValueError:
+        messagebox.showerror("Erro", "Por favor, insira um número válido.")
+
+def tan():
+    try:
+        result = math.tan(math.radians(float(entry1.get())))
+        label_result.config(text="Resultado: " + str(result))
+    except ValueError:
+        messagebox.showerror("Erro", "Por favor, insira um número válido.")
+
+def clear():
+    entry1.delete(0, tk.END)
+    entry2.delete(0, tk.END)
+    label_result.config(text="Resultado: ")
+
+# Criação da janela principal
+root = tk.Tk()
+root.title("Calculadora Avançada")
+
+# Criação dos campos de entrada
+entry1 = tk.Entry(root)
+entry1.pack(pady=5)
+
+entry2 = tk.Entry(root)
+entry2.pack(pady=5)
+
+# Criação dos botões de operação
+button_add = tk.Button(root, text="Adicionar", command=add)
+button_add.pack(pady=5)
+
+button_subtract = tk.Button(root, text="Subtrair", command=subtract)
+button_subtract.pack(pady=5)
+
+button_multiply = tk.Button(root, text="Multiplicar", command=multiply)
+button_multiply.pack(pady=5)
+
+button_divide = tk.Button(root, text="Dividir", command=divide)
+button_divide.pack(pady=5)
+
+button_power = tk.Button(root, text="Exponenciação", command=power)
+button_power.pack(pady=5)
+
+button_sqrt = tk.Button(root, text="Raiz Quadrada", command=sqrt)
+button_sqrt.pack(pady=5)
+
+button_log = tk.Button(root, text="Logaritmo", command=log)
+button_log.pack(pady=5)
+
+button_sin = tk.Button(root, text="Seno", command=sin)
+button_sin.pack(pady=5)
+
+button_cos = tk.Button(root, text="Cosseno", command=cos)
+button_cos.pack(pady=5)
+
+button_tan = tk.Button(root, text="Tangente", command=tan)
+button_tan.pack(pady=5)
+
+button_clear = tk.Button(root, text="Limpar", command=clear)
+button_clear.pack(pady=5)
+
+# Criação do rótulo para exibir o resultado
+label_result = tk.Label(root, text="Resultado: ")
+label_result.pack(pady=5)
+
+# Execução do loop principal da interface
+root.mainloop()

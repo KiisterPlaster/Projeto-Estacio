@@ -1,0 +1,64 @@
+import tkinter as tk
+from tkinter import messagebox
+
+def add():
+    try:
+        result = float(entry1.get()) + float(entry2.get())
+        label_result.config(text="Resultado: " + str(result))
+    except ValueError:
+        messagebox.showerror("Erro", "Por favor, insira números válidos.")
+
+def subtract():
+    try:
+        result = float(entry1.get()) - float(entry2.get())
+        label_result.config(text="Resultado: " + str(result))
+    except ValueError:
+        messagebox.showerror("Erro", "Por favor, insira números válidos.")
+
+def multiply():
+    try:
+        result = float(entry1.get()) * float(entry2.get())
+        label_result.config(text="Resultado: " + str(result))
+    except ValueError:
+        messagebox.showerror("Erro", "Por favor, insira números válidos.")
+
+def divide():
+    try:
+        if float(entry2.get()) == 0:
+            messagebox.showerror("Erro", "Divisão por zero não é permitida.")
+        else:
+            result = float(entry1.get()) / float(entry2.get())
+            label_result.config(text="Resultado: " + str(result))
+    except ValueError:
+        messagebox.showerror("Erro", "Por favor, insira números válidos.")
+
+# Criação da janela principal
+root = tk.Tk()
+root.title("Calculadora")
+
+# Criação dos campos de entrada
+entry1 = tk.Entry(root)
+entry1.pack(pady=5)
+
+entry2 = tk.Entry(root)
+entry2.pack(pady=5)
+
+# Criação dos botões de operação
+button_add = tk.Button(root, text="Adicionar", command=add)
+button_add.pack(pady=5)
+
+button_subtract = tk.Button(root, text="Subtrair", command=subtract)
+button_subtract.pack(pady=5)
+
+button_multiply = tk.Button(root, text="Multiplicar", command=multiply)
+button_multiply.pack(pady=5)
+
+button_divide = tk.Button(root, text="Dividir", command=divide)
+button_divide.pack(pady=5)
+
+# Criação do rótulo para exibir o resultado
+label_result = tk.Label(root, text="Resultado: ")
+label_result.pack(pady=5)
+
+# Execução do loop principal da interface
+root.mainloop()
