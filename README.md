@@ -43,7 +43,7 @@ Instalação e Execução
 ### Clone o repositório:
 bash
 Copiar código
-git clone https://github.com/seu-usuario/calculadora-engenharia.git
+git clone [https://github.com/KiisterPlaster/Projeto-Estacio.git]
 cd calculadora-engenharia
 
 ### Instale as dependências:
