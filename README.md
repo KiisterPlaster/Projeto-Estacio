@@ -44,7 +44,7 @@ Instalação e Execução
 bash
 Copiar código
 git clone https://github.com/KiisterPlaster/Projeto-Estacio.git
-cd calculadora-engenharia
+cd projeto-estacio
 
 ### Instale as dependências:
 bash
