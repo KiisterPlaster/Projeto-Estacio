@@ -73,22 +73,41 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir issues para repo
 
 ## Glossário
 
-Newton (N): Unidade de força no Sistema Internacional de Unidades (SI). Definida como a quantidade de força necessária para acelerar uma massa de um quilograma a uma taxa de um metro por segundo quadrado.
-Newton por metro quadrado (N/m²): Unidade de pressão ou tensão no SI. Equivalente a um Pascal (Pa).
-Momento Fletor (N.m): Produto da força aplicada e a distância do ponto de aplicação da força ao ponto de referência.
-Força Cortante (N): Força que tende a causar a ruptura de um material ao longo de um plano.
-Força Normal (N): Componente da força que age perpendicularmente à superfície de um material.
-Esforços Compostos: Esforços que combinam diferentes tipos de tensões em um material, como tensões normais e momentos fletores.
-Transformada de Fourier: Ferramenta matemática que decompõe uma função em componentes de frequência.
-Capacidade de Estacas (kN): Capacidade de carga de uma estaca, determinada pela resistência do solo.
-Estabilidade de Talude: Avaliação da estabilidade de encostas naturais ou taludes artificiais.
-Permeabilidade do Solo (m/s): Medida da capacidade de um solo de permitir a passagem de água.
-Recalque do Solo (m): Deformação vertical do solo sob carga aplicada.
-Coesão (kN/m²): Propriedade do solo que indica sua capacidade de resistir ao cisalhamento sem qualquer pressão externa.
-Ângulo de Atrito (°): Ângulo formado entre a superfície de ruptura e a direção do esforço cortante máximo.
-Peso Específico (kN/m³): Peso por unidade de volume de um material.
-Coeficiente de Permeabilidade (m/s): Medida da facilidade com que os fluidos podem passar através de um material poroso.
-Gradiente Hidráulico: Razão da diferença de altura entre dois pontos sobre a distância entre eles.
-Carga (kN): Força ou peso suportado por uma estrutura.
-Largura (m): Dimensão horizontal de uma estrutura.
-Módulo de Elasticidade (kN/m²): Medida da rigidez de um material, definida como a relação entre a tensão aplicada e a deformação resultante.
+### Newton (N):
+Unidade de força no Sistema Internacional de Unidades (SI). Definida como a quantidade de força necessária para acelerar uma massa de um quilograma a uma taxa de um metro por segundo quadrado.
+### Newton por metro quadrado (N/m²):
+Unidade de pressão ou tensão no SI. Equivalente a um Pascal (Pa).
+### Momento Fletor (N.m):
+Produto da força aplicada e a distância do ponto de aplicação da força ao ponto de referência.
+### Força Cortante (N):
+Força que tende a causar a ruptura de um material ao longo de um plano.
+### Força Normal (N):
+Componente da força que age perpendicularmente à superfície de um material.
+### Esforços Compostos:
+Esforços que combinam diferentes tipos de tensões em um material, como tensões normais e momentos fletores.
+### Transformada de Fourier:
+Ferramenta matemática que decompõe uma função em componentes de frequência.
+### Capacidade de Estacas (kN):
+Capacidade de carga de uma estaca, determinada pela resistência do solo.
+### Estabilidade de Talude:
+Avaliação da estabilidade de encostas naturais ou taludes artificiais.
+### Permeabilidade do Solo (m/s):
+Medida da capacidade de um solo de permitir a passagem de água.
+### Recalque do Solo (m):
+Deformação vertical do solo sob carga aplicada.
+### Coesão (kN/m²):
+Propriedade do solo que indica sua capacidade de resistir ao cisalhamento sem qualquer pressão externa.
+### Ângulo de Atrito (°):
+Ângulo formado entre a superfície de ruptura e a direção do esforço cortante máximo.
+### Peso Específico (kN/m³):
+Peso por unidade de volume de um material.
+### Coeficiente de Permeabilidade (m/s):
+Medida da facilidade com que os fluidos podem passar através de um material poroso.
+### Gradiente Hidráulico:
+Razão da diferença de altura entre dois pontos sobre a distância entre eles.
+### Carga (kN):
+Força ou peso suportado por uma estrutura.
+### Largura (m):
+Dimensão horizontal de uma estrutura.
+### Módulo de Elasticidade (kN/m²):
+Medida da rigidez de um material, definida como a relação entre a tensão aplicada e a deformação resultante.
